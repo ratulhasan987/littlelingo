@@ -1,0 +1,4 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root {font-family:Arial,sans-serif;color:#273352;background:#f8f7ff}
+body {min-height:100vh;background:radial-gradient(circle at top left,#fff1d2,transparent 40%),radial-gradient(circle at bottom right,#d8f4ff,transparent 48%),#f8f7ff}
+button:focus-visible,input:focus-visible{outline:3px solid #8b5cf6;outline-offset:3px}
