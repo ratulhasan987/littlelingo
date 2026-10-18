@@ -11,11 +11,14 @@ class LearningTests(TestCase):
         self.assertIn('meow',result['reply'])
         correct=self.send('cat',result['learner_id']).json()
         self.assertTrue(correct['correct'])
+        self.assertEqual(correct['ui']['type'],'success')
     def test_mode_and_safety(self):
         self.assertEqual(classify('I am sad')[0],'support')
         self.assertEqual(classify('I am bored')[0],'engagement')
         out=self.send('my phone number is 123').json()
         self.assertIn('private',out['reply'])
+        self.assertEqual(out['ui']['type'],'support')
+        self.assertNotIn('💛',out['reply'])
     def test_no_punishment_for_wrong_answers(self):
         first=self.send('start').json()
         second=self.send('banana',first['learner_id']).json()
