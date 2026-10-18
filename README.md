@@ -1,4 +1,4 @@
-# 🦉 LittleLingo — English Learning Chatbot for Kids Under 7
+# LittleLingo — English Learning Chatbot for Kids Under 7
 
 A working Django REST Framework + Next.js hybrid chatbot MVP with 3 learning levels, mastery tracking, mode detection, SEL support, optional Groq LLM and browser speech synthesis. **No paid AI API required.**
 
